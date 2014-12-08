@@ -88,7 +88,7 @@ class WkHtmlToPdfCreator implements PdfCreatorInterface
     /**
      *
      */
-    protected static function getSystem()
+    protected function getSystem()
     {
         $uname = strtolower(php_uname());
 
