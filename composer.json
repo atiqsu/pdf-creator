@@ -13,8 +13,12 @@
         "php": ">=5.4.0",
         "dompdf/dompdf" : "0.6.*"
     },
+    "require-dev": {
+        "symfony/process": "2.6.*"
+    },
     "suggest": {
-        "guzzlehttp/guzzle": "For pdf creation from url source."
+        "guzzlehttp/guzzle": "For pdf creation from url source.",
+        "symfony/process": "For use wkhtmltopdf"
     },
     "autoload": {
         "psr-4": {

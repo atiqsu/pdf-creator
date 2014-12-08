@@ -20,8 +20,8 @@ interface PdfCreatorInterface
      *
      * @param  string        $url      The url to load the resource html
      * @param  string        $path     The path to save pdf
-     * @param  \Closure|null $callback The callback to configure the creation of pdf
-     * @return int|boolean If can't create return false
+     * @param  \Closure|null $callback The callback to call after creation succesfull
+     * @return void
      */
     public function url($url, $path, Closure $callback = null);
 
@@ -30,18 +30,18 @@ interface PdfCreatorInterface
      *
      * @param string        $filePath Path to file to resource html
      * @param string        $path     Path to save pdf file
-     * @param \Closure|null $callback The callback to configure the creation of pdf
-     * @return int|boolean If can't create return false
+     * @param \Closure|null $callback The callback to call after creation succesfull
+     * @return void
      */
     public function file($filePath, $path, Closure $callback = null);
 
     /**
      * Create pdf file from raw html
      *
-     * @param string        $html     The html to convert to pdf
-     * @param path          $path     The Path to save pdf file
-     * @param \Closure|null $callback The callback to configure the creation of pdf
-     * @return int|boolean If can't create return false
+     * @param string        $filePath Path to file to resource html
+     * @param string        $path     Path to save pdf file
+     * @param \Closure|null $callback The callback to call after creation succesfull
+     * @return void
      */
     public function raw($html, $path, Closure $callback = null);
 }

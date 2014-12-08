@@ -7,8 +7,7 @@ web development, however it's not easy task.
 This package come to help you create pdf file in easy way, provide a beautiful interface
 that easy to read. The easy way to create PDF file is from HTML. Because we are familiar with it instead draw.
 
-
-***Note: This package build on top of DOMPDF package.***
+For now its support WkHtmlToPdf and DOMPDF.
 
 ### Example
 
@@ -21,10 +20,7 @@ $creator = new PdfCreator;
 /**
  * Require GuzzleHttp to use url
  */
-$creator->url($url, __DIR__.'/google.pdf', function($dompdf)
-{
-    $dompdf->set_paper('A4');
-});
+$creator->url($url, __DIR__.'/google.pdf');
 ````
 
 Or if you want create from html file.
@@ -34,10 +30,7 @@ use Memtoko\PdfCreator\PdfCreator;
 
 $creator = new PdfCreator;
 
-$creator->file($pathToHtmlFile, $pathToSave', function($dompdf)
-{
-    $dompdf->set_paper('A4');
-});
+$creator->file($pathToHtmlFile, $pathToSave');
 ````
 
 This package also support creation from raw html, use raw method for it.
@@ -49,8 +42,5 @@ use Illuminate\View\Factory;
 $creator = new PdfCreator;
 $html = $viewFactory->make('invoices.order', ['number' => 3242])->render();
 
-$creator->raw($html, $pathToSave', function($dompdf)
-{
-    $dompdf->set_paper('A4');
-});
+$creator->raw($html, $pathToSave');
 ````

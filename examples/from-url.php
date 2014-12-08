@@ -1,4 +1,8 @@
 <?php
+/**
+ * Get the autoload file
+ */
+require __DIR__.'/../vendor/autoload.php';
 
 use Memtoko\PdfCreator\PdfCreator;
 
@@ -8,7 +12,7 @@ $creator = new PdfCreator;
 /**
  * Require GuzzleHttp to use url
  */
-$creator->url($url, __DIR__.'/google.pdf', function($dompdf)
+$creator->url($url, __DIR__.'/google.pdf', function($path)
 {
-    $dompdf->set_paper('A4');
+    echo $path;
 });
