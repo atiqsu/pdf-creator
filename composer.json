@@ -14,7 +14,7 @@
         "dompdf/dompdf" : "0.6.*"
     },
     "suggest": {
-        "guzzlehttp/guzzle": "For pdf creation from html"
+        "guzzlehttp/guzzle": "For pdf creation from url source."
     },
     "autoload": {
         "psr-4": {
