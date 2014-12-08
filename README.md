@@ -8,7 +8,7 @@ This package come to help you create pdf file in easy way, provide a beautiful i
 that easy to read. The easy way to create PDF file is from HTML. Because we are familiar with it instead draw.
 
 
-***Note: This package build on top of DOMPDF package.**
+***Note: This package build on top of DOMPDF package.***
 
 ### Example
 
