@@ -20,9 +20,21 @@ PHP_VERSION >= 5.0 or die("DOMPDF requires PHP 5.0+");
 /**
  * The root of your DOMPDF installation
  *
- * vendorDir is dynamic variable declared in composer autoload_files
  */
-define("DOMPDF_DIR", str_replace(DIRECTORY_SEPARATOR, '/', $vendorDir . '/dompdf/dompdf')));
+$dompdfDir = realpath(dirname(__FILE__).'/../../../dompdf/dompdf');
+
+if(! file_exists($dompdfDir))
+{
+    //This is path if we are in development
+    $dompdfDir = realpath(dirname(__FILE__).'/../vendor/dompdf/dompdf');
+}
+
+if(! file_exists($dompdfDir))
+{
+    throw new Exception("Can't find dompdf dir, please fix me.");
+}
+
+define("DOMPDF_DIR", str_replace(DIRECTORY_SEPARATOR, '/', $dompdfDir));
 
 /**
  * The location of the DOMPDF include directory
