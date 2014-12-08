@@ -1,0 +1,33 @@
+{
+    "name": "memtoko/pdf-creator",
+    "type": "application",
+    "description": "A beautifull syntax pdf creation for php.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Syaiful Bahri",
+            "email": "syaiful@memtoko.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.6",
+        "dompdf/dompdf" : "0.6.*"
+    },
+    "suggest": {
+        "guzzlehttp/guzzle": "For pdf creation from html"
+    },
+    "autoload": {
+        "psr-4": {
+            "Memtoko\\PdfCreator\\": "src"
+        },
+        "files": [
+            "serc/settings.php"
+        ]
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.1-dev"
+        }
+    },
+    "minimum-stability": "dev"
+}
