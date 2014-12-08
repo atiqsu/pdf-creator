@@ -96,5 +96,8 @@ class WkHtmlToPdfCreator implements PdfCreatorInterface
         {
             return PHP_INT_SIZE === 4 ? 'linux-i386' : 'linux-amd64';
         }
+
+        throw new \Exception("{$uname} system not supported yet.");
+
     }
 }
