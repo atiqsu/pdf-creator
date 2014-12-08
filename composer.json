@@ -21,7 +21,7 @@
             "Memtoko\\PdfCreator\\": "src"
         },
         "files": [
-            "serc/settings.php"
+            "src/settings.php"
         ]
     },
     "extra": {
